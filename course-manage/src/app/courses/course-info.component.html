@@ -1,7 +1,7 @@
 
 <h2>Course Info</h2>
 <hr/>
-<form #courseForm="ngForm">
+<form #courseForm="ngForm" *ngIf="course">
     <div class="form-group row">
         <table class="col-sm2 col-from-label">Nome: </table>
         <div class="col-sm-10">
@@ -22,7 +22,7 @@
              </div>
         </div>
     </div>
-    <div class="form-group row">
+    <div class="form-group row" >
         <table class="col-sm2 col-from-label">Preço: </table>
         <div class="col-sm-10">
             <input [(ngModel)]="course.rating" name="rating" type="number" required #courseRating="ngModel"
